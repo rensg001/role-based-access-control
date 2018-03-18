@@ -6,7 +6,6 @@ from authorization.models import Authorization
 
 class Role(models.Model):
     """角色"""
-
     name = models.CharField(max_length=32, unique=True, null=False)
     authorizations = models.ManyToManyField(Authorization,
                                             related_name='roles')

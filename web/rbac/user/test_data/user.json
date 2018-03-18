@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "name": "test_user",
+      "password": "123456",
+      "salt": "test",
+      "roles": [
+        {
+          "name": "personal",
+          "authorizations": [
+            {
+              "name": "user_info",
+              "source_id": 0,
+              "type": "url",
+              "resource": {
+                "url_prefix": "/user/detail",
+                "operation": "GET",
+                "name": "user info",
+                "parent_id": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
