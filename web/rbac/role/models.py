@@ -9,5 +9,6 @@ class Role(models.Model):
     name = models.CharField(max_length=32, unique=True, null=False)
     authorizations = models.ManyToManyField(Authorization,
                                             related_name='roles')
+    description = models.CharField(max_length=256, null=True)
     update_time = models.DateTimeField(auto_now=True)
     create_time = models.DateTimeField(auto_now_add=True)

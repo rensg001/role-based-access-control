@@ -10,10 +10,9 @@ from . import views
 
 user_patterns = (
     [
-        url('^auth/$', views.UserAuthAPIView.as_view(), name='user_auth'),
-        # url('^role/$', views.UserRoleAPIView.as_view(), name='user_role')
+        url('^$', views.RoleAPIView.as_view(), name='role'),
     ],
-    'user'
+    'role'
 )
 
 v1_urlpatterns = [url('^v1/', include(user_patterns, namespace='v1'))]
